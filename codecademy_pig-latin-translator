@@ -1,0 +1,22 @@
+#Cria a função e printa o título
+def translator():
+    print "Pig Latin Translator"
+
+#Cria variável do final da palavra
+    pyg = 'ay'
+
+#Pergunta ao usuário qual palavra será traduzida
+    original = raw_input('Enter a word:')
+
+#Condicional para validar a palavra inserida pelo usuário e realização da tradução
+    if len(original) > 0 and original.isalpha():
+        word = original.lower()
+        first = word[0]
+        new_word = word + first + pyg
+        new_word = new_word[1:len(new_word)]
+        print new_word
+    else:
+        print "Word is empty or invalid."
+        translator()
+    
+translator()
